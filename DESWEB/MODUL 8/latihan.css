@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #fff5f8;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #65445a;
+}
+
+/* Identitas */
+.identity {
+    width: 78%;
+    margin: 25px auto;
+    padding: 15px 20px;
+    background: #e9a9c2;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 10px;
+    box-shadow: 0 3px 7px rgba(180, 100, 140, 0.15);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Layout utama */
+.content-layout {
+    width: 78%;
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* Kotak konten */
+.box {
+    background: #fce4ec;
+    padding: 12px;
+    border: 1px solid #efc3d4;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(180, 100, 140, 0.12);
+    transition: 0.3s;
+}
+
+.box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 10px rgba(180, 100, 140, 0.2);
+}
+
+/* Judul kotak */
+.box h5 {
+    background: #d9c2eb;
+    color: #654477;
+    padding: 9px 12px;
+    margin: 0 0 12px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* Isi tulisan */
+.box p {
+    font-size: 11px;
+    line-height: 1.7;
+    text-align: justify;
+    color: #65445a;
+    margin: 0;
+}
+
+/* Testimoni */
+.testimoni {
+    min-height: 270px;
+}
+
+/* Kolom kanan */
+.right-column {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 15px;
+}
+
+.kritik,
+.saran {
+    min-height: 125px;
+}
+
+/* Footer */
+.footer {
+    width: 78%;
+    margin: 20px auto;
+    padding: 15px;
+    text-align: center;
+    background: #fce4ec;
+    color: #65445a;
+    border: 1px solid #efc3d4;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(180, 100, 140, 0.12);
+    font-size: 11px;
+}
+
+/* Tampilan HP */
+@media (max-width: 767px) {
+    .content-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .identity {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .testimoni {
+        min-height: 200px;
+    }
+
+    .kritik,
+    .saran {
+        min-height: 130px;
+    }
+}
